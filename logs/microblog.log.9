@@ -1,0 +1,129 @@
+2024-08-06 23:30:05,391 ERROR: Exception on /index [GET] [in /home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/fabi/microblog/app/routes.py", line 36, in index
+    per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+KeyError: 'POSTS_PER_PAGE'
+2024-08-06 23:31:18,872 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:45]
+2024-08-06 23:31:20,646 ERROR: Exception on / [GET] [in /home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/fabi/microblog/app/routes.py", line 35, in index
+    posts = db.paginate(current_user.following_posts(), page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+KeyError: 'POSTS_PER_PAGE'
+2024-08-06 23:38:58,058 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:45]
+2024-08-06 23:39:01,426 ERROR: Exception on / [GET] [in /home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/fabi/microblog/app/routes.py", line 40, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/fabi/microblog/app/templates/index.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/home/fabi/microblog/app/templates/base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/fabi/microblog/app/templates/index.html", line 20, in block 'content'
+    {{ post.author.username }} says: <b>{{ post.body }}</b>
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 487, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'post' is undefined
+2024-08-06 23:48:35,557 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:45]
+2024-08-06 23:49:51,993 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:45]
+2024-08-06 23:49:53,358 ERROR: Exception on / [GET] [in /home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/fabi/microblog/app/routes.py", line 40, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/fabi/microblog/app/templates/index.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/home/fabi/microblog/app/templates/base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/fabi/microblog/app/templates/index.html", line 20, in block 'content'
+    {{ posts.author.username }} says: <b>{{ posts.body }}</b>
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 487, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'author'
+2024-08-06 23:51:02,948 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:45]
+2024-08-06 23:51:04,209 ERROR: Exception on / [GET] [in /home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/fabi/microblog/app/routes.py", line 40, in index
+    return render_template('index.html', title='Home', form=form, posts=posts, next_url=next_url, prev_url=prev_url)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/fabi/microblog/app/templates/index.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/home/fabi/microblog/app/templates/base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/fabi/microblog/app/templates/index.html", line 20, in block 'content'
+    {{ posts.author.username }} says: <b>{{ posts.body }}</b>
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 487, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'flask_sqlalchemy.pagination.SelectPagination object' has no attribute 'author'
+2024-08-06 23:58:10,809 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:45]
