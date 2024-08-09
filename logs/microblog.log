@@ -1,4 +1,4 @@
-2024-08-07 16:26:39,657 ERROR: Exception on / [GET] [in /home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py:1414]
+2024-08-09 12:52:28,349 ERROR: Exception on / [GET] [in /home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
     response = self.full_dispatch_request()
@@ -22,38 +22,12 @@ Traceback (most recent call last):
     raise rewrite_traceback_stack(source=source)
   File "/home/fabi/microblog/app/templates/index.html", line 2, in top-level template code
     {% import "bootstrap_wtf.html" as wtf %}
-  File "/home/fabi/microblog/app/templates/base.html", line 48, in top-level template code
-    {% set unread_message_count = current_user.unread_message_count() %}
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
-    if hasattr(obj, "jinja_pass_arg"):
-jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'unread_message_count'
-2024-08-07 16:28:30,248 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:49]
-2024-08-07 16:28:32,272 ERROR: Exception on / [GET] [in /home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/fabi/microblog/app/routes.py", line 42, in index
-    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
-    return _render(app, template, context)
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
-    rv = template.render(context)
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 939, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/fabi/microblog/app/templates/index.html", line 2, in top-level template code
-    {% import "bootstrap_wtf.html" as wtf %}
-  File "/home/fabi/microblog/app/templates/base.html", line 48, in top-level template code
-    {% set unread_message_count =current_user.unread_message_count()  %}
-  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
-    if hasattr(obj, "jinja_pass_arg"):
-jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'unread_message_count'
+  File "/home/fabi/microblog/app/templates/base.html", line 47, in top-level template code
+    <a class="nav-link" aria-current="page" href="{{ url_for('messages') }}">{{ ('Messages') }}
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/fabi/microblog/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'messages'. Did you mean 'register' instead?
