@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-08-09 13:11-0300\n"
+"POT-Creation-Date: 2024-08-09 18:19-0300\n"
 "PO-Revision-Date: 2024-08-09 13:58-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -96,7 +96,9 @@ msgstr "¡No puedes seguirte a ti mismo!"
 
 #: app/routes.py:184
 msgid "Check your email for the instructions to reset your password"
-msgstr "Revisa tu correo electrónico para obtener las instrucciones para restablecer tu contraseña."
+msgstr ""
+"Revisa tu correo electrónico para obtener las instrucciones para "
+"restablecer tu contraseña."
 
 #: app/routes.py:199
 msgid "Your password has been reset."
@@ -177,3 +179,4 @@ msgstr "Exporta tus publicaciones"
 #: app/templates/user.html:35
 msgid "Send private message"
 msgstr "Enviar mensaje privado"
+

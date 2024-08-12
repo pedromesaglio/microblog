@@ -10,7 +10,7 @@ import os
 from flask_mail import Mail
 from flask_moment import Moment
 from flask import request 
-from flask_babel import _1
+from flask_babel import lazy_gettext as _1
 
 
 from flask_babel import Babel
