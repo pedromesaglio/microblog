@@ -34,3 +34,6 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'messag
 2024-08-12 10:43:54,497 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:61]
 2024-08-12 10:58:25,963 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:61]
 2024-08-12 10:58:55,642 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:61]
+2024-08-12 17:31:49,054 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:61]
+2024-08-12 17:32:03,430 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:61]
+2024-08-12 17:32:46,765 INFO: Microblog startup [in /home/fabi/microblog/app/__init__.py:61]
